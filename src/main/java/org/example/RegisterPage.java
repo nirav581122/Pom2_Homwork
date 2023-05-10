@@ -9,12 +9,21 @@ public class RegisterPage extends Utils {
     private By _password = By.id("Password");
     private By _confirmPassword = (By.id("ConfirmPassword"));
     private By _clickOnRegisterButton = (By.id("register-button"));
+    private By _selectBirthDate =(By.name("DateOfBirthDay"));
+    private By _selectBirthMonth =(By.name("DateOfBirthMonth"));
+    private By _selectBirthYear =(By.name("DateOfBirthYear"));
 
     public void registerDetails() {
         //Enter First name
         typeText(_firstName, "test");
         //Enter SecondName
         typeText(_lastName, "rem");
+        //Select day from drop down
+        selectByDate(_selectBirthDate,"8");
+        //Select moth from drop down
+        selectByMonth(_selectBirthMonth,"12");
+        //Select year from drop down
+        selectByYear(_selectBirthYear,(100));
         //Enter Email id
         typeText(_email, "abc@" + timestamp() + "gmail.com");
         //enter Password

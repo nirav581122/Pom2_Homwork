@@ -16,8 +16,8 @@ public class TestSuit extends BaseTest {
     LogIn logIn = new LogIn();
     EmailAFriendResultPage emailAFriendResultPage = new EmailAFriendResultPage();
     AddToCompareResultPage addToCompareResultPage = new AddToCompareResultPage();
-
-    @Test
+    BuildYourOwnComputerE2E buildYourOwnComputer = new BuildYourOwnComputerE2E();
+     @Test
     public void verifyRegisterShouldRegisterSucessfully() {
         //click on the home page
         homePage.clickOnRegisterButton();
@@ -100,6 +100,38 @@ public class TestSuit extends BaseTest {
         homePage.voteButtonClick();
         //assertion
         communityPoleResultPage.communityVoteButtonWithRegistration();
+    }
+    @Test
+    public void checkList(){
+        homePage.printOutProductName();
+    }
+    @Test
+    public void verifyAlertHandling(){
+        homePage.alertMassage();
+    }
+    @Test
+    public void verifyingCurrencyChangeAccordinglySelection(){
+         homePage.currencyChangeFromHomePage();
+    }
+    @Test
+    public void verifySearchFunctionality(){
+         homePage.searchFunctionality();
+    }
+    @Test
+    public void verifyNopCommerceNewRelease(){
+         homePage.nopCommerceNewRelease();
+    }
+    @Test
+    public void verifyBuildYourOwnProduct(){
+         buildYourOwnComputer.buildYourComputer();
+    }
+    @Test
+    public void verifyFacebookPage(){
+         homePage.multipleWindowHandling();
+    }
+    @Test
+    public void VerifyAlertMassageWithoutVote(){
+         homePage.voteAlertCheck();
     }
 }
 

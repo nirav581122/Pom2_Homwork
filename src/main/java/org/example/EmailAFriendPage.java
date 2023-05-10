@@ -19,7 +19,7 @@ public class EmailAFriendPage extends Utils {
         typeText(_personalMassage, "please check this mail");
         //click on send button
         clickOnElement(_sendButton);
-        String actualMassageWillAppearOnPage = getTextFromElement(By.xpath("//li[contains(text(),'Only registered customers can use email a friend f')]"));
+      //  String actualMassageWillAppearOnPage = getTextFromElement(By.xpath("//li[contains(text(),'Only registered customers can use email a friend f')]"));
         System.out.println();
     }
 
